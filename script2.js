@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var logoWidth = 200; // Ajustez selon la largeur de vos logos
     var cloneCount = 50; // Nombre de clones à ajouter
 
-    var imageNames = ['Photoshop.png','css.png', 'html.png', 'Figma.svg', 'Lightroom.png', 'indesign.png', 'notion.svg', 'libreoffice.png', 'WordPress.png', 'Premiere_Pro.png', 'vscode.png', 'PowerPoint.png', 'PHP.png', 'Excel.png','js.png', 'Illustrator.png', 'Audition.png', 'After_Effects.png'];
+    var imageNames = ['Photoshop.png','css.png', 'html.png', 'Figma.svg', 'Lightroom.png', 'indesign.png', 'notion.png', 'libreoffice.png', 'WordPress.png', 'Premiere_Pro.png', 'vscode.png', 'PowerPoint.png', 'PHP.png', 'Excel.png','js.png', 'Illustrator.png', 'Audition.png', 'After_Effects.png'];
 
     // Ajoutez les logos à la fin pour créer une boucle infinie
     for (let i = 0; i < cloneCount; i++) {
