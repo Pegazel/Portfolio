@@ -41,6 +41,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
+    z-index: 99;
 }
 
 
@@ -80,7 +81,6 @@ button.dark-mode-toggle {
     cursor: pointer;
     /* width: 20%; */
     opacity: 1;
-    
 }
 
 
@@ -484,13 +484,11 @@ main{
     background-position: center;
     max-width: 100%;
     margin-top: 100vh;
-    z-index: 2;
 }
 
 .wrapper{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-  /* gap: 30px;  */
   /* perspective: 800px; */
   color: #fcfcfc;
   animation: fadeIn .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1;
@@ -613,9 +611,12 @@ li:before{
 
 .slider {
   overflow: hidden;
-  width: 100%; /* Ajustez selon vos préférences */
-  margin: auto; /* Centre le slider horizontalement */
+  width: 100%; 
+  height: 40vh;
+  margin: auto; 
   padding: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .logo-container {
@@ -631,6 +632,111 @@ li:before{
   width: 17%; /* Ajustez selon le nombre de logos que vous voulez afficher horizontalement */
   height: 80px; /* Ajustez selon vos préférences */
 }
+
+
+
+.section_propos{
+  position: relative;
+  height: 90vh;
+  text-align: center;
+  /* z-index: -1; */
+}
+
+.container {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+}
+
+.moi{
+  border-radius: 50%;
+  width: 200px;
+  transition: transform 0.9s ease;
+}
+
+.moi:hover {
+  transform: rotate(360deg);
+}
+
+.section_propos>p{
+  margin-top: 10%;
+  padding-right: 10px;
+  width: 40%;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: auto;
+  text-align: left;
+}
+
+.text {
+  font-size: 2rem;
+  /* position: absolute; */
+  /* transform: translate(-50%, -50%); */
+  display: none;
+}
+
+.word {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.un{
+  position: absolute;
+  top: 120%;
+  left: 25%;
+}
+
+.deux{
+  position: absolute;
+  top: 55%;
+  left: 12%;
+}
+
+.trois{
+  position: absolute;
+  top: -10%;
+  left: 20%;
+}
+
+.quatre{
+  position: absolute;
+  top: -50%;
+  left: 40%;
+}
+
+.cinq{
+  position: absolute;
+  top: -10%;
+  left: 65%;
+}
+
+.six{
+  position: absolute;
+  top: 45%;
+  left: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -662,6 +768,3 @@ li:before{
 ::-webkit-scrollbar-track {
         background-color: #2f2f2f;
 }
-
-
-

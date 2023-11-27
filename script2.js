@@ -26,17 +26,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //     window.addEventListener('scroll', () => {
 //         const scrollPosition = window.scrollY;
+//         const maxScroll = 100; // Position de défilement à partir de laquelle l'opacité est réduite
 
-//         if (scrollPosition > 100) {
-//             h1.style.opacity = '0'; // Faire disparaître le h1
-//             nav.style.opacity = '0'; // Faire disparaître la nav
-//             darkMode.style.opacity = '1'; // Afficher le bouton de mode sombre
-//             menu.style.opacity = '1'; // Afficher le menu
+//         if (scrollPosition > maxScroll) {
+//             // Calculez l'opacité en fonction de la position de défilement
+//             const opacity = 1 - (scrollPosition - maxScroll) / maxScroll;
+
+//             h1.style.opacity = opacity; // Réduisez l'opacité du h1
+//             nav.style.opacity = opacity; // Réduisez l'opacité de la nav
+//             darkMode.style.opacity = 1; // Maintenez l'opacité du bouton de mode sombre à 1
+//             menu.style.opacity = 1; // Maintenez l'opacité du menu à 1
 //         } else {
-//             h1.style.opacity = '1'; // Afficher le h1
-//             nav.style.opacity = '1'; // Afficher la nav
-//             darkMode.style.opacity = '1'; // Faire disparaître le bouton de mode sombre
-//             menu.style.opacity = '1'; // Faire disparaître le menu
+//             h1.style.opacity = 1; // Maintenez l'opacité du h1 à 1
+//             nav.style.opacity = 1; // Maintenez l'opacité de la nav à 1
+//             darkMode.style.opacity = 1; // Maintenez l'opacité du bouton de mode sombre à 1
+//             menu.style.opacity = 1; // Maintenez l'opacité du menu à 1
 //         }
 //     });
 // });
@@ -59,14 +63,24 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.style.opacity = opacity; // Réduisez l'opacité de la nav
             darkMode.style.opacity = 1; // Maintenez l'opacité du bouton de mode sombre à 1
             menu.style.opacity = 1; // Maintenez l'opacité du menu à 1
+
+            if (opacity < 0) {
+                nav.style.display = 'none'; // Cachez la nav
+            } else {
+                h1.style.display = 'block'; // Affichez le h1
+                nav.style.display = 'block'; // Affichez la nav
+            }
         } else {
-            h1.style.opacity = 1; // Maintenez l'opacité du h1 à 1
-            nav.style.opacity = 1; // Maintenez l'opacité de la nav à 1
-            darkMode.style.opacity = 1; // Maintenez l'opacité du bouton de mode sombre à 1
-            menu.style.opacity = 1; // Maintenez l'opacité du menu à 1
+            h1.style.opacity = 1; 
+            nav.style.opacity = 1; 
+            darkMode.style.opacity = 1; 
+            menu.style.opacity = 
+
+            nav.style.display = 'block';
         }
     });
 });
+
 
 
 // SLIDER SUTOUT PAS TOUCHER!!!!    IL MARCHEEEEE
@@ -109,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Configurez l'intervalle pour changer de diapositive toutes les 3 secondes (ajustez selon vos préférences)
+    // Change de diapositive toutes les 3 secondes 
     intervalId = setInterval(showNextSlide, 2000);
 
     // Arrêtez le slider lorsque la souris survole la zone du slider (facultatif)
@@ -125,49 +139,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 //Fin slider
-
-
-
-
-
-
-
-
-
-// // Arrêtez le slider lorsque la souris survole la zone du slider (facultatif)
-// sliderContainer.addEventListener('mouseenter', function () {
-//     clearInterval(intervalId);
-// });
-
-// // Redémarrez le slider lorsque la souris quitte la zone du slider (facultatif)
-// sliderContainer.addEventListener('mouseleave', function () {
-//     intervalId = setInterval(showNextSlide, 3000);
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -313,4 +284,20 @@ projects.forEach((project) => {
 
     projectWrapper.appendChild(card);
 });
+
+
+
+// A PROPOS
+const container = document.querySelector('.container');
+const text = document.querySelector('.text');
+
+container.addEventListener('mouseover', () => {
+    text.style.display = 'block';
+});
+
+container.addEventListener('mouseleave', () => {
+    text.style.display = 'none';
+});
+
+
 
