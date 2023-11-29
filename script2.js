@@ -18,32 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const h1 = document.querySelector('header h1');
-//     const nav = document.querySelector('.soleil');
-//     const menu = document.querySelector('.menu');
-//     const darkMode = document.querySelector('.dark-mode-toggle');
-
-//     window.addEventListener('scroll', () => {
-//         const scrollPosition = window.scrollY;
-//         const maxScroll = 100; // Position de défilement à partir de laquelle l'opacité est réduite
-
-//         if (scrollPosition > maxScroll) {
-//             // Calculez l'opacité en fonction de la position de défilement
-//             const opacity = 1 - (scrollPosition - maxScroll) / maxScroll;
-
-//             h1.style.opacity = opacity; // Réduisez l'opacité du h1
-//             nav.style.opacity = opacity; // Réduisez l'opacité de la nav
-//             darkMode.style.opacity = 1; // Maintenez l'opacité du bouton de mode sombre à 1
-//             menu.style.opacity = 1; // Maintenez l'opacité du menu à 1
-//         } else {
-//             h1.style.opacity = 1; // Maintenez l'opacité du h1 à 1
-//             nav.style.opacity = 1; // Maintenez l'opacité de la nav à 1
-//             darkMode.style.opacity = 1; // Maintenez l'opacité du bouton de mode sombre à 1
-//             menu.style.opacity = 1; // Maintenez l'opacité du menu à 1
-//         }
-//     });
-// });
 
 document.addEventListener('DOMContentLoaded', () => {
     const h1 = document.querySelector('header h1');
@@ -154,26 +128,27 @@ const projects = [
         rightImage: "images/fast&serious2.jpg",
         year: "Mai 2023",
         price: "Dev",
+        lien: "resaweb.html",
         details: [
-            "Width 7.7\"",
-            "Length 31.75\"",
-            "Wheelbase 14\"",
-            "Nose 6.875\"",
-            "Tail 6.25\""
+            "Design",
+            "HTML",
+            "CSS",
+            "Javascript",
+            "PHP"
         ]
     },
     {
-        title: "Persona",
-        frontImage: "images/persona.png",
-        rightImage: "images/persona2.png",
-        year: "Mars 2023",
-        price: "UX/UI",
+        title: "Podcast",
+        frontImage: "images/zombie.png",
+        rightImage: "images/zombie2.png",
+        year: "Nov 2023",
+        price: "Crea",
+        lien: "podcast.html",
         details: [
-            "Width 7.7\"",
-            "Length 31.75\"",
-            "Wheelbase 14\"",
-            "Nose 6.875\"",
-            "Tail 6.25\""
+            "Adobe audition",
+            "Photoshop",
+            "Son",
+            ""
         ]
     },
     {
@@ -182,12 +157,13 @@ const projects = [
         rightImage: "images/jq2.png",
         year: "Nov 2022",
         price: "Crea",
+        lien: "journal.html",
         details: [
-            "Width 7.7\"",
-            "Length 31.75\"",
-            "Wheelbase 14\"",
-            "Nose 6.875\"",
-            "Tail 6.25\""
+            "Indesign",
+            "Photoshop",
+            "Mise en page",
+            "Poids des images",
+            ""
         ]
     },
     {
@@ -196,12 +172,13 @@ const projects = [
         rightImage: "images/dataviz2.png",
         year: "Nov 2023",
         price: "Dev",
+        lien: "dataviz.html",
         details: [
-            "Width 7.7\"",
-            "Length 31.75\"",
-            "Wheelbase 14\"",
-            "Nose 6.875\"",
-            "Tail 6.25\""
+            "HTML",
+            "CSS",
+            "Javascript",
+            "JSON",
+            "Design"
         ]
     },
     {
@@ -210,12 +187,13 @@ const projects = [
         rightImage: "images/parcasterix2.png",
         year: "Avril 2023",
         price: "UX/UI",
+        lien: "refonte.html",
         details: [
-            "Width 7.7\"",
-            "Length 31.75\"",
-            "Wheelbase 14\"",
-            "Nose 6.875\"",
-            "Tail 6.25\""
+            "Figma",
+            "Analyse",
+            "UX",
+            "UI",
+            ""
         ]
     },
     {
@@ -224,12 +202,13 @@ const projects = [
         rightImage: "images/citoyen2.png",
         year: "Mars 2023",
         price: "Crea",
+        lien: "maraudes.html",
         details: [
-            "Width 7.7\"",
-            "Length 31.75\"",
-            "Wheelbase 14\"",
-            "Nose 6.875\"",
-            "Tail 6.25\""
+            "Illustrator",
+            "Photoshop",
+            "Charte graphique",
+            "Charte éditoriale",
+            ""
         ]
     }
     
@@ -241,7 +220,7 @@ const projectWrapper = document.getElementById("projectWrapper");
 projects.forEach((project) => {
     const card = document.createElement("a");
     card.classList.add("card");
-    card.href = "#";
+    card.href = project.lien;
 
     const front = document.createElement("div");
     front.classList.add("front");

@@ -1,0 +1,194 @@
+.top {
+    grid-template-columns: 1fr 1fr;
+}
+
+.nom_projet{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 3rem;
+}
+
+header {
+    height: fit-content;
+}
+
+main{
+    margin-top: 0vh;
+    min-height: 100vh;
+}
+
+
+
+.image_descri {
+    margin-top: 3vh;
+    padding: 0px 20px 0px 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 10fr 9fr;
+}
+
+.hover {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+img {
+    width: 60%;
+    cursor: pointer;
+}
+
+figure{
+    height: fit-content;
+    width: fit-content;
+}
+
+.big-img, .small-img {
+    width: 100%;
+}
+
+
+.ligne_small{
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.hover figure img {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.hover figure:hover img {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+.image_descri p{
+    margin-top: 3vh;
+    font-family: 'Jost', 'Courier New', Courier, monospace;
+    width: 100%;
+    font-size: 1rem;
+    padding: 20px;
+    font-style: bold;
+}
+
+
+/* bouton */
+.button-container-1 {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6vh;
+    overflow: hidden;
+    border: 2px solid;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    margin-bottom: 5vh;
+  }
+  .button-container-1 button {
+    width: 100%;
+    height: 100%;
+    letter-spacing: 1px;
+    background: #000;
+    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    -webkit-mask-size: 2300% 100%;
+    mask-size: 2300% 100%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    -webkit-animation: ani2 0.9s steps(22) forwards;
+    animation: ani2 0.9s steps(22) forwards;
+  }
+  .button-container-1 button:hover {
+    -webkit-animation: ani 0.9s steps(22) forwards;
+    animation: ani 0.9s steps(22) forwards;
+  }
+
+  .mas a {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-family: 'Jost', sans-serif;
+    position: absolute;
+    margin-top: 9px;
+    overflow: hidden;
+  }
+
+  button a, .mas a{
+    font-size: 1.3rem;
+    color: #ffffff;
+  }
+  
+  @-webkit-keyframes ani {
+    from {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+    to {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+  }
+  @keyframes ani {
+    from {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+    to {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+  }
+  @-webkit-keyframes ani2 {
+    from {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+    to {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+  }
+  @keyframes ani2 {
+    from {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+    to {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+  }
+
+
+@media screen and (max-width: 1000px) {
+    .image_descri {
+        grid-template-columns: 1fr; /* Une seule colonne pour les écrans plus petits */
+    }
+    .hover {
+        margin: auto;
+        padding: 2%;
+    }
+
+    .image_descri p{
+        margin-top: 0vh;
+        padding-top: 0px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .nom_projet{
+        padding-top: 100px;
+        font-size: 2rem;
+    }
+}
