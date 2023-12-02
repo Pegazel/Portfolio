@@ -57,17 +57,18 @@ figure{
     gap: 2px;
 }
 
-.hover figure img {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+.hover figure img:not(.big-img):not(:hover) {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
-.hover figure:hover img {
-	-webkit-filter: grayscale(0);
-	filter: grayscale(0);
+.hover figure img.big-img {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
 }
+
 
 .image_descri p{
     margin-top: 3vh;
@@ -98,13 +99,13 @@ figure{
     width: 100%;
     height: 100%;
     letter-spacing: 1px;
-    background: #000;
+    background: rgb(255, 255, 255);
     -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
     mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
     -webkit-mask-size: 2300% 100%;
     mask-size: 2300% 100%;
     border: none;
-    color: #fff;
+    color: #000000;
     cursor: pointer;
     -webkit-animation: ani2 0.9s steps(22) forwards;
     animation: ani2 0.9s steps(22) forwards;
@@ -122,11 +123,17 @@ figure{
     position: absolute;
     margin-top: 9px;
     overflow: hidden;
+    color: #ffffff;
   }
 
   button a, .mas a{
     font-size: 1.3rem;
-    color: #ffffff;
+    font-weight: 600;
+  }
+
+  button a{
+    color: black;
+    
   }
   
   @-webkit-keyframes ani {
@@ -191,4 +198,8 @@ figure{
         padding-top: 100px;
         font-size: 2rem;
     }
+}
+
+audio{
+  margin-left: 5vw;
 }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="./lib/gsap.min.js"></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <div class="top">
+            <a href="index.html"><div class="menu">Menu</div></a>
+            <h1 class="name">Pauline Gazengel</h1>
+            <button class="dark-mode-toggle">
+                <img src="images/soleil-dark.png" alt="">
+            </button>
+        </div>
+
+        <nav class="soleil">
+            
+            <div id="cercle"></div>
+            <div class="ligneH1"></div>
+            <div class="ligneH2"></div>
+            <div class="ligneV3"></div>
+            <div class="ligneV4"></div>
+            <div class="ligneD1"><a href="#projets">Projets</a></div>
+            <div class="ligneD2"><a href="#about">À propos</a></div>
+            <div class="ligneD3"><a href="#skills">Skills</a></div>
+            <div class="ligneD4"><a href="#contact">Contact</a></div>
+            
+        </nav>
+    </header>
+
+    <main>
+        
+        <h2 id="projets">Mes Projets</h2>
+        <div class="wrapper" id="projectWrapper"></div>
+       
+
+        <section>
+            <h2 id="skills">Mes skills</h2>
+            <div class="slider">
+                <div class="logo-container"></div>
+            </div>
+        </section>
+     
+        <section class="section_propos">
+            <h2 id="about">À propos</h2>
+            <div class="container">
+                <div class="text">
+                    <p class="word un">Sérieuse</p>
+                    <p class="word deux">Polyvalente</p>
+                    <p class="word trois">Créative</p>
+                    <p class="word quatre">Débrouillarde</p>
+                    <p class="word cinq">Organisée</p>
+                    <p class="word six">Autonome</p>
+                </div>
+                <img src="images/moi.jpg" alt="" class="moi">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nostrum doloremque ex est temporibus quae numquam culpa modi architecto ad, placeat rerum nulla consectetur voluptatibus. Culpa aliquid id beatae debitis!</p>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="button-group">
+                <div>
+                    <a href="https://www.linkedin.com/in/pauline-g-2434ba251/" target="_blank" class="btn btn4">Linkedin</a>
+                </div>
+                <div>
+                    <a href="mailto:pauline.gazengel@gmail.com" target="_blank" class="btn btn4">Mail</a>
+                </div>
+                <div>
+                    <a href="images/CV 2023.pdf" target="_blank" class="btn btn4">CV</a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/pln.photo_/" target="_blank" class="btn btn4">Instagram</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+</body>
+<script src="script.js"></script>
+</html>

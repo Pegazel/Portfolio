@@ -103,6 +103,7 @@ body.dark-mode #cercle {
     /* position: fixed; */
 }
 
+
 #cercle {
     position: absolute;
     width: 120px;
@@ -111,7 +112,7 @@ body.dark-mode #cercle {
     border: solid 2px rgb(255, 255, 255);
     border-radius: 50%;
     top: 60%; 
-    left: 51%; 
+    left: 50.5%; 
     transform: translate(-50%, -50%);
 }
 
@@ -137,14 +138,14 @@ nav>div{
 .ligneV3 {
     width: 10%;
     top: 33%; 
-    left: 46%; 
+    left: 45.5%; 
     transform: rotate(90deg);
 }
 
 .ligneV4 {
     width: 10%;
     top: 87%; 
-    left: 46%; 
+    left: 45.5%; 
     transform: rotate(90deg);
 }
 
@@ -193,294 +194,6 @@ nav a{
     position: relative;
     top: 18px;
 }
-
-@media (max-width: 1060px) { 
-
-    .ligneH1 {
-        top: 60%; 
-        left: 32%; 
-    }
-    
-    .ligneH2 {
-        top: 60%; 
-        left: 70%; 
-    }
-    
-    .ligneV3 {
-        width: 12%;
-        top: 37%; 
-        left: 46%; 
-    }
-    
-    .ligneV4 {
-        width: 12%;
-        top: 85%; 
-        left: 46%; 
-    }
-    
-    .ligneD1 {
-        top: 36%; 
-        left: 29%; 
-    }
-    
-    .ligneD2 {
-        top: 77%; 
-        left: 58%; 
-    }
-    
-    .ligneD3 {
-        top: 77%; 
-        left: 29%; 
-    }
-    
-    .ligneD4 {
-        top: 36%; 
-        left: 58%; 
-    }
-
-    .name{
-        font-size: 3rem;
-    }
-
-    nav a{
-        font-size: 1.5rem;
-        opacity: 1;
-        position: relative;
-        top: 12px;
-    }
-
-}
-
-@media (max-width: 800px) { 
-
-  .ligneD2 { 
-    width: 20%;
-  }
-  body.dark-mode #cercle {
-    width: 125px;
-    height: 125px;
-  }
-}
-
-@media (max-width: 650px) { 
-
-  .ligneH1 {
-      top: 60%; 
-      left: 25%; 
-  }
-  
-  .ligneH2 {
-      top: 60%; 
-      left: 77%; 
-  }
-  
-  .ligneV3 {
-      width: 15%;
-      top: 35%; 
-      left: 45%; 
-  }
-  
-  .ligneV4 {
-      width: 15%;
-      top: 85%; 
-      left: 45%; 
-  }
-  
-  .ligneD1 {
-      top: 36%; 
-      left: 25%; 
-  }
-  
-  .ligneD2 {
-      top: 77%; 
-      left: 63%; 
-      width: 25%;
-    }
-  
-  .ligneD3 {
-      top: 77%; 
-      left: 24%; 
-  }
-  
-  .ligneD4 {
-      top: 39%; 
-      left: 63%; 
-  }
-
-  nav a{
-      font-size: 1.5rem;
-      opacity: 1;
-      position: relative;
-      top: 12px;
-  }
-
-}
-
-@media (max-width: 570px) { 
-
-  .name { 
-    font-size: 1.5rem;
-  }
-
-  .top img{
-    width: 50px;
-  }
-
-  .menu{
-    width: 50px;
-    height: 50px;
-    font-size: 0.7rem;
-  }
-
-  body{
-    height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
-  }
-
-  /* .logo {
-    width: 1%;
-    height: 40px; 
-  } */
-
-}
-
-@media (max-width: 466px) { 
-
-  #cercle, body.dark-mode #cercle{
-    width: 100px;
-    height: 100px;
-  }
-
-  /* body.dark-mode #cercle {
-    width: 125px;
-    height: 125px;
-  } */
-
-  .ligneH1 { 
-    left: 20%;
-    width: 25%;
-  }
-
-  .ligneH2 {
-      left: 81%;
-      width: 25%;
-  }
-
-  .ligneV3 {
-      width: 25%;
-      left: 39%; 
-  }
-
-  .ligneV4 {
-      width: 25%;
-      left: 39%; 
-  }
-
-  .ligneD1 {
-      top: 35%; 
-      left: 10%; 
-      width: 30%;
-  }
-
-  .ligneD2 {
-      top: 77%; 
-      left: 65%; 
-      width: 30%;
-  }
-
-  .ligneD3 {
-      top: 77%; 
-      left: 10%; 
-      width: 30%;
-  }
-
-  .ligneD4 {
-      top: 35%; 
-      left: 65%;
-      width: 30%; 
-  }
-}
-
-@media (max-width: 400px) { 
-  .ligneD2 { 
-    width: 35%;
-  }
-}
-
-@media (max-width: 320px) { 
-
-  #cercle{
-    width: 90px;
-    height: 90px;
-  }
-
-  .ligneH1 { 
-    left: 15%;
-    width: 20%;
-  }
-
-  .ligneH2 {
-      left: 83%;
-      width: 20%;
-  }
-
-  .ligneV3 {
-      width: 25%;
-      left: 38%; 
-      top: 42%;
-  }
-
-  .ligneV4 {
-      width: 25%;
-      left: 38%; 
-      top: 77%;
-  }
-
-  .ligneD1 a, .ligneD2 a, .ligneD3 a, .ligneD4 a{
-    font-size: 1.2rem;
-    top: 10px;
-  }
-
-  .ligneD1 {
-      top: 43%; 
-      left: 10%; 
-      width: 30%;
-  }
-
-  .ligneD2 {
-      top: 72%; 
-      left: 62%; 
-      width: 38%;
-  }
-
-  .ligneD3 {
-      top: 72%; 
-      left: 5%; 
-      width: 30%;
-  }
-
-  .ligneD4 {
-      top: 43%; 
-      left: 62%;
-      width: 30%; 
-  }
-
-  .name{
-    position: relative;
-    top: 70px;
-    text-wrap: nowrap;
-    left: 10%;
-  }
-
-  .dark-mode-toggle{
-    position: relative;
-    left: 70%;
-  }
-
-}
-
-
 
 main{
     background-image: url(images/glass.png) ;
@@ -635,7 +348,7 @@ li:before{
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  width: 17%; /* Ajustez selon le nombre de logos que vous voulez afficher horizontalement */
+  width: 100px; 
   height: 80px; /* Ajustez selon vos préférences */
 }
 
@@ -726,143 +439,50 @@ li:before{
 
 /* PAGE CONTACT */
 
-#contact h2{
-  margin-bottom: 10vh;
-}
 
-.trapdoor {
-  margin-bottom: 10vh;
-  -webkit-transform: translateZ(0px);
-  transform: translateZ(0px);
-  -webkit-font-smoothing: antialiased;
+/* Button Group */
+.button-group {
   position: relative;
-  /* top: 50%; */
-  left: 50%;
-  margin-left: -100px;
-  margin-top: -25px;
-  width: 200px;
-  height: 50px;
-  box-shadow: inset -7px 0px 12px -8px rgba(0,0,0,0.3), inset 7px 0px 12px -8px rgba(0,0,0,0.3);
-  background: rgba(0,0,0,0.3);
-  -webkit-transition: background 400ms ease-in-out;
-  -moz-transition: background 400ms ease-in-out;
-  -ms-transition: background 400ms ease-in-out;
-  -o-transition: background 400ms ease-in-out;
-  transition: background 400ms ease-in-out;
-  
-  &:hover {
-    background: #fff;
-    
-    .door {
-       box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.4);
-       -webkit-transform: scale(1.08);
-       -moz-transform: scale(1.08);
-       -ms-transform: scale(1.08);
-       -o-transform: scale(1.08);
-       transform: scale(1.08);
-    }
-   
-    .top {
-    top: -50%; 
-    }
-    
-    .bottom {
-    top: 100%; 
-    }
-  }
-  
- .twitter-follow-button {
-   margin-left: -77px;
-   position: absolute !important;
-   margin-top: -14px;
-   left: 50%;
-   top: 50%;
-  }
+  display: flex;
+  gap: 6%;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 0 10rem 0;
 }
 
-.top {
-  top: 0%;
-  left: 0px;
-  
-  &:before {
-    top: 5px;
-  }
+/* .button-group div {
+  margin: 5rem 0 10rem 0;
+} */
+
+.button-group a {
+  padding: 10px 30px;
+  margin: 1em;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
 }
 
-.bottom {
-  top: 50%;
-  left: 0px;
-  
-  &:before {
-    top: -20px;
-  }
+/* Button Styling */
+.btn4 {
+  background-color: #FF8360;
+  color: #FFF;
+  font-size: 20px;
+
 }
 
-.door {
-  -webkit-transition: top 400ms, box-shadow 200ms, -webkit-transform 300ms;
-  -moz-transition: top 400ms, box-shadow 200ms, -moz-transform 300ms;
-  -ms-transition: top 400ms, box-shadow 200ms, -ms-transform 300ms;
-  -o-transition: top 400ms, box-shadow 200ms, -o-transform 300ms;
-  transition: top 400ms, box-shadow 200ms, transform 300ms;
-  -webkit-transition-timing-function: ease-in-out;
-  -moz-transition-timing-function: ease-in-out;
-  -ms-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  background-color: #fff;
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
-  z-index: 2;
-  height: 50%;
-  
-  &:before {
-    font-family: 'tweet', sans-serif;
-    position: absolute;
-    margin-left: -20px;
-    font-size: 35px;
-    display: block;
-    color: #4099FF;
-    content: "\e000";
-    width: 0px;
-    height: 20px;
-    left: 52%;
-  }
+.btn4:hover {
+  padding: 1em 1.5em;
+  letter-spacing: 2.5px;
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #FF8360, 0 0 0 2px white inset, 0 0 0 5px #FF8360, 7.5px 7.5px 0 2.5px white, 10px 10px 0 5px #FF8360;
 }
 
-@font-face {
-	font-family: 'tweet';
-	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/277/tweet.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+body.dark-mode .btn4{
+  background-color: #424242;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+body.dark-mode .btn4:hover{
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #424242, 0 0 0 2px white inset, 0 0 0 5px #424242, 7.5px 7.5px 0 2.5px white, 10px 10px 0 5px #424242;
+}
 
 
 
@@ -885,4 +505,302 @@ li:before{
 
 ::-webkit-scrollbar-track {
         background-color: #2f2f2f;
+}
+
+
+@media (max-width: 1060px) { 
+
+  .ligneH1 {
+      top: 60%; 
+      left: 32%; 
+  }
+  
+  .ligneH2 {
+      top: 60%; 
+      left: 70%; 
+  }
+  
+  .ligneV3 {
+      width: 12%;
+      top: 37%; 
+      left: 46%; 
+  }
+  
+  .ligneV4 {
+      width: 12%;
+      top: 85%; 
+      left: 46%; 
+  }
+  
+  .ligneD1 {
+      top: 36%; 
+      left: 29%; 
+  }
+  
+  .ligneD2 {
+      top: 77%; 
+      left: 58%; 
+  }
+  
+  .ligneD3 {
+      top: 77%; 
+      left: 29%; 
+  }
+  
+  .ligneD4 {
+      top: 36%; 
+      left: 58%; 
+  }
+
+  .name{
+      font-size: 3rem;
+  }
+
+  nav a{
+      font-size: 1.5rem;
+      opacity: 1;
+      position: relative;
+      top: 12px;
+  }
+
+}
+
+@media (max-width: 800px) { 
+
+  .ligneD2 { 
+    width: 20%;
+  }
+  body.dark-mode #cercle {
+    width: 125px;
+    height: 125px;
+  }
+
+  .button-group {
+    flex-wrap: wrap;
+    padding: 5rem 0 5rem 0;
+  }
+  .button-group div {
+    margin-top: 3rem;
+  }
+
+}
+
+@media (max-width: 650px) { 
+
+.ligneH1 {
+    top: 60%; 
+    left: 25%; 
+}
+
+.ligneH2 {
+    top: 60%; 
+    left: 77%; 
+}
+
+.ligneV3 {
+    width: 15%;
+    top: 35%; 
+    left: 45%; 
+}
+
+.ligneV4 {
+    width: 15%;
+    top: 85%; 
+    left: 45%; 
+}
+
+.ligneD1 {
+    top: 36%; 
+    left: 25%; 
+}
+
+.ligneD2 {
+    top: 77%; 
+    left: 63%; 
+    width: 25%;
+  }
+
+.ligneD3 {
+    top: 77%; 
+    left: 24%; 
+}
+
+.ligneD4 {
+    top: 39%; 
+    left: 63%; 
+}
+
+nav a{
+    font-size: 1.5rem;
+    opacity: 1;
+    position: relative;
+    top: 12px;
+}
+
+}
+
+@media (max-width: 570px) { 
+
+.name { 
+  font-size: 1.5rem;
+}
+
+.top img{
+  width: 50px;
+}
+
+.menu{
+  width: 50px;
+  height: 50px;
+  font-size: 0.7rem;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+button.dark-mode-toggle {
+  margin-right: 0px;
+}
+
+.logo {
+  width: 100px; 
+}
+}
+
+@media (max-width: 466px) { 
+
+#cercle, body.dark-mode #cercle{
+  width: 100px;
+  height: 100px;
+}
+
+/* body.dark-mode #cercle {
+  width: 125px;
+  height: 125px;
+} */
+
+.ligneH1 { 
+  left: 20%;
+  width: 25%;
+}
+
+.ligneH2 {
+    left: 81%;
+    width: 25%;
+}
+
+.ligneV3 {
+    width: 25%;
+    left: 39%; 
+}
+
+.ligneV4 {
+    width: 25%;
+    left: 39%; 
+}
+
+.ligneD1 {
+    top: 35%; 
+    left: 10%; 
+    width: 30%;
+}
+
+.ligneD2 {
+    top: 77%; 
+    left: 65%; 
+    width: 30%;
+}
+
+.ligneD3 {
+    top: 77%; 
+    left: 10%; 
+    width: 30%;
+}
+
+.ligneD4 {
+    top: 35%; 
+    left: 65%;
+    width: 30%; 
+}
+}
+
+@media (max-width: 400px) { 
+.ligneD2 { 
+  width: 35%;
+}
+}
+
+@media (max-width: 320px) { 
+
+#cercle{
+  width: 90px;
+  height: 90px;
+}
+
+.ligneH1 { 
+  left: 15%;
+  width: 20%;
+}
+
+.ligneH2 {
+    left: 83%;
+    width: 20%;
+}
+
+.ligneV3 {
+    width: 25%;
+    left: 38%; 
+    top: 42%;
+}
+
+.ligneV4 {
+    width: 25%;
+    left: 38%; 
+    top: 77%;
+}
+
+.ligneD1 a, .ligneD2 a, .ligneD3 a, .ligneD4 a{
+  font-size: 1.2rem;
+  top: 10px;
+}
+
+.ligneD1 {
+    top: 43%; 
+    left: 10%; 
+    width: 30%;
+}
+
+.ligneD2 {
+    top: 72%; 
+    left: 62%; 
+    width: 38%;
+}
+
+.ligneD3 {
+    top: 72%; 
+    left: 5%; 
+    width: 30%;
+}
+
+.ligneD4 {
+    top: 43%; 
+    left: 62%;
+    width: 30%; 
+}
+
+.name{
+  position: relative;
+  top: 70px;
+  text-wrap: nowrap;
+  left: 10%;
+}
+
+.dark-mode-toggle{
+  position: relative;
+  left: 70%;
+}
+
 }

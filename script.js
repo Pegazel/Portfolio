@@ -15,55 +15,173 @@ document.addEventListener("DOMContentLoaded", function() {
             img.src = "images/soleil-dark.png"; 
         }
     });
+});
 
-//     // Sélectionnez l'en-tête
-// const header = document.querySelector('nav');
 
-// // Ajoutez un gestionnaire d'événements de défilement
-// window.addEventListener('scroll', () => {
-//     // Obtenez la position actuelle de défilement
-//     const scrollPosition = window.scrollY;
-    
-//     // Calculez l'opacité en fonction de la position de défilement
-//     const opacity = 1 - scrollPosition / 200; // Vous pouvez ajuster le nombre pour contrôler le moment où l'en-tête commence à disparaître
-    
-//     // Appliquez l'opacité à l'en-tête
-//     header.style.opacity = opacity;
+
+document.addEventListener('DOMContentLoaded', () => {
+    const h1 = document.querySelector('header h1');
+    const nav = document.querySelector('.soleil');
+    const menu = document.querySelector('.menu');
+    const darkMode = document.querySelector('.dark-mode-toggle');
+
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        const maxScroll = 100; // Position de défilement à partir de laquelle l'opacité est réduite
+
+        if (scrollPosition > maxScroll) {
+            // Calculez l'opacité en fonction de la position de défilement
+            const opacity = 1 - (scrollPosition - maxScroll) / maxScroll;
+
+            h1.style.opacity = opacity; // Réduisez l'opacité du h1
+            nav.style.opacity = opacity; // Réduisez l'opacité de la nav
+            darkMode.style.opacity = 1; // Maintenez l'opacité du bouton de mode sombre à 1
+            menu.style.opacity = 1; // Maintenez l'opacité du menu à 1
+
+            if (opacity < 0) {
+                nav.style.display = 'none'; // Cachez la nav
+            } else {
+                h1.style.display = 'block'; // Affichez le h1
+                nav.style.display = 'block'; // Affichez la nav
+            }
+        } else {
+            h1.style.opacity = 1; 
+            nav.style.opacity = 1; 
+            darkMode.style.opacity = 1; 
+            menu.style.opacity = 
+
+            nav.style.display = 'block';
+        }
+    });
+});
+
+
+
+// SLIDER SUTOUT PAS TOUCHER!!!!    IL MARCHEEEEE
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     var sliderContainer = document.querySelector('.slider');
+//     var logoContainer = document.querySelector('.logo-container');
+
+//     var logoWidth = 200; //largeur des logos
+//     var cloneCount = 50; // Nombre de clones à ajouter
+
+//     var imageNames = ['Photoshop.png','css.png', 'html.png', 'Figma.svg', 'Lightroom.png', 'indesign.png', 'notion.png', 'libreoffice.png', 'WordPress.png', 'Premiere_Pro.png', 'vscode.png', 'PowerPoint.png', 'PHP.png', 'Excel.png','js.png', 'Illustrator.png', 'Audition.png', 'After_Effects.png'];
+
+//     // Ajoutez les logos à la fin pour créer une boucle infinie
+//     for (let i = 0; i < cloneCount; i++) {
+//         imageNames.forEach(function (imageName) {
+//             const logo = document.createElement('div');
+//             logo.classList.add('logo');
+//             logo.style.backgroundImage = `url('images/logo/${imageName}')`;
+//             logo.style.width = logoWidth + 'px';
+//             logoContainer.appendChild(logo);
+//         });
+//     }
+
+//     var currentIndex = 0;
+//     var intervalId;
+
+//     function showNextSlide() {
+//         currentIndex++;
+//         const newPosition = -currentIndex * logoWidth + 'px';
+//         logoContainer.style.transform = 'translateX(' + newPosition + ')';
+
+//         // Si nous avons atteint la fin des logos, revenons à la position initiale sans transition
+//         if (currentIndex >= (imageNames.length + 1) * cloneCount) {
+//             currentIndex = 0;
+//             logoContainer.style.transition = 'none';
+//             logoContainer.style.transform = 'translateX(' + -(currentIndex * logoWidth) + 'px)';
+//             void logoContainer.offsetWidth;
+//             logoContainer.style.transition = 'transform 0.5s ease';
+//         }
+//     }
+
+//     // Change de diapositive toutes les 2 secondes 
+//     intervalId = setInterval(showNextSlide, 2000);
+
+//     // Arrêtez le slider lorsque la souris survole la zone du slider
+//     sliderContainer.addEventListener('mouseenter', function () {
+//         clearInterval(intervalId);
+//     });
+
+//     // Redémarrez le slider lorsque la souris quitte la zone du slider 
+//     sliderContainer.addEventListener('mouseleave', function () {
+//         intervalId = setInterval(showNextSlide, 2000);
+//     });
 // });
 
-// Sélectionnez l'en-tête
-const header = document.querySelector('header');
+document.addEventListener('DOMContentLoaded', function () {
+    var sliderContainer = document.querySelector('.slider');
+    var logoContainer = document.querySelector('.logo-container');
+    var cloneCount = 50; // Nombre de clones à ajouter
+    var mobileLogoWidth = 100; // Largeur pour les écrans mobiles
 
-// Sélectionnez le menu et le bouton pour le mode sombre
-const menu = document.querySelector('.menu');
-const darkMode = document.querySelector('.dark-mode-toggle');
+    function updateLogoWidth() {
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth;
+        var logoWidth = screenWidth < 769 ? mobileLogoWidth : 200; // Largeur pour les ordinateurs
+        var logoMargin = screenWidth < 769 ? 20 : 40; // Marge entre les logos
 
-// Ajoutez un gestionnaire d'événements de défilement
-window.addEventListener('scroll', () => {
-    // Obtenez la position actuelle de défilement
-    const scrollPosition = window.scrollY;
+        // Supprimez tous les logos actuels pour les recréer avec la nouvelle largeur
+        while (logoContainer.firstChild) {
+            logoContainer.removeChild(logoContainer.firstChild);
+        }
 
-    // Calculez l'opacité en fonction de la position de défilement
-    const opacity = 1 - scrollPosition / 200; // Vous pouvez ajuster le nombre pour contrôler le moment où l'en-tête commence à disparaître
+        // Ajoutez les nouveaux logos avec la largeur mise à jour
+        for (let i = 0; i < cloneCount; i++) {
+            var imageNames = ['Photoshop.png', 'css.png', 'html.png', 'Figma.svg', 'Lightroom.png', 'indesign.png', 'notion.png', 'libreoffice.png', 'WordPress.png', 'Premiere_Pro.png', 'vscode.png', 'PowerPoint.png', 'PHP.png', 'Excel.png', 'js.png', 'Illustrator.png', 'Audition.png', 'After_Effects.png'];
 
-    // Appliquez l'opacité à l'en-tête (sauf le menu et le bouton)
-    header.style.opacity = opacity;
+            imageNames.forEach(function (imageName) {
+                const logo = document.createElement('div');
+                logo.classList.add('logo');
+                logo.style.backgroundImage = `url('images/logo/${imageName}')`;
+                logo.style.width = logoWidth + 'px';
+                logo.style.marginRight = logoMargin + 'px'; // Espacement entre les logos
+                logoContainer.appendChild(logo);
+            });
+        }
 
-    // Appliquez l'opacité au menu et au bouton pour le mode sombre
-    menu.style.opacity = opacity;
-    darkMode.style.opacity = opacity;
+        var currentIndex = 0;
+        var intervalId;
+
+        function showNextSlide() {
+            currentIndex++;
+            const newPosition = -currentIndex * (logoWidth + logoMargin) + 'px'; // Inclure la marge dans le calcul
+            logoContainer.style.transform = 'translateX(' + newPosition + ')';
+
+            // Si nous avons atteint la fin des logos, revenons à la position initiale sans transition
+            if (currentIndex >= (imageNames.length + 1) * cloneCount - 1) {
+                currentIndex = 0;
+                logoContainer.style.transition = 'none';
+                logoContainer.style.transform = 'translateX(' + (-(currentIndex * (logoWidth + logoMargin))) + 'px)'; // Réinitialisation à la position initiale
+                void logoContainer.offsetWidth;
+                logoContainer.style.transition = 'transform 0.5s ease';
+            }
+        }
+
+        // Change de diapositive toutes les 2 secondes 
+        intervalId = setInterval(showNextSlide, 2000);
+
+        // Arrêtez le slider lorsque la souris survole la zone du slider
+        sliderContainer.addEventListener('mouseenter', function () {
+            clearInterval(intervalId);
+        });
+
+        // Redémarrez le slider lorsque la souris quitte la zone du slider 
+        sliderContainer.addEventListener('mouseleave', function () {
+            intervalId = setInterval(showNextSlide, 2000);
+        });
+    }
+
+    updateLogoWidth(); // Appel initial de la fonction
+    window.addEventListener('resize', updateLogoWidth); // Gestion du redimensionnement de la fenêtre
 });
 
-// Appliquez une opacité initiale aux éléments
-menu.style.opacity = 1;
-darkMode.style.opacity = 1;
 
 
 
 
-
-
-});
+//Fin slider
 
 
 
@@ -79,26 +197,27 @@ const projects = [
         rightImage: "images/fast&serious2.jpg",
         year: "Mai 2023",
         price: "Dev",
+        lien: "resaweb.html",
         details: [
-            "Width 7.7\"",
-            "Length 31.75\"",
-            "Wheelbase 14\"",
-            "Nose 6.875\"",
-            "Tail 6.25\""
+            "Design",
+            "HTML",
+            "CSS",
+            "Javascript",
+            "PHP"
         ]
     },
     {
-        title: "Persona",
-        frontImage: "images/persona.png",
-        rightImage: "images/persona2.png",
-        year: "Mars 2023",
-        price: "UX/UI",
+        title: "Podcast",
+        frontImage: "images/zombie.png",
+        rightImage: "images/zombie2.png",
+        year: "Nov 2023",
+        price: "Crea",
+        lien: "podcast.html",
         details: [
-            "Width 7.7\"",
-            "Length 31.75\"",
-            "Wheelbase 14\"",
-            "Nose 6.875\"",
-            "Tail 6.25\""
+            "Adobe audition",
+            "Photoshop",
+            "Son",
+            ""
         ]
     },
     {
@@ -107,12 +226,13 @@ const projects = [
         rightImage: "images/jq2.png",
         year: "Nov 2022",
         price: "Crea",
+        lien: "journal.html",
         details: [
-            "Width 7.7\"",
-            "Length 31.75\"",
-            "Wheelbase 14\"",
-            "Nose 6.875\"",
-            "Tail 6.25\""
+            "Indesign",
+            "Photoshop",
+            "Mise en page",
+            "Poids des images",
+            ""
         ]
     },
     {
@@ -121,12 +241,13 @@ const projects = [
         rightImage: "images/dataviz2.png",
         year: "Nov 2023",
         price: "Dev",
+        lien: "dataviz.html",
         details: [
-            "Width 7.7\"",
-            "Length 31.75\"",
-            "Wheelbase 14\"",
-            "Nose 6.875\"",
-            "Tail 6.25\""
+            "HTML",
+            "CSS",
+            "Javascript",
+            "JSON",
+            "Design"
         ]
     },
     {
@@ -135,12 +256,13 @@ const projects = [
         rightImage: "images/parcasterix2.png",
         year: "Avril 2023",
         price: "UX/UI",
+        lien: "refonte.html",
         details: [
-            "Width 7.7\"",
-            "Length 31.75\"",
-            "Wheelbase 14\"",
-            "Nose 6.875\"",
-            "Tail 6.25\""
+            "Figma",
+            "Analyse",
+            "UX",
+            "UI",
+            ""
         ]
     },
     {
@@ -149,12 +271,13 @@ const projects = [
         rightImage: "images/citoyen2.png",
         year: "Mars 2023",
         price: "Crea",
+        lien: "maraudes.html",
         details: [
-            "Width 7.7\"",
-            "Length 31.75\"",
-            "Wheelbase 14\"",
-            "Nose 6.875\"",
-            "Tail 6.25\""
+            "Illustrator",
+            "Photoshop",
+            "Charte graphique",
+            "Charte éditoriale",
+            "Wordpress"
         ]
     }
     
@@ -166,7 +289,7 @@ const projectWrapper = document.getElementById("projectWrapper");
 projects.forEach((project) => {
     const card = document.createElement("a");
     card.classList.add("card");
-    card.href = "#";
+    card.href = project.lien;
 
     const front = document.createElement("div");
     front.classList.add("front");
@@ -210,3 +333,72 @@ projects.forEach((project) => {
     projectWrapper.appendChild(card);
 });
 
+
+
+// A PROPOS
+const container = document.querySelector('.container');
+const text = document.querySelector('.text');
+
+container.addEventListener('mouseover', () => {
+    text.style.display = 'block';
+});
+
+container.addEventListener('mouseleave', () => {
+    text.style.display = 'none';
+});
+
+
+
+// Animation gsap
+
+gsap.from(".ligneH1", { 
+    duration: 3,
+    opacity: 0,
+    x: -900,
+});
+
+gsap.from(".ligneH2", { 
+    duration: 3,
+    opacity: 0,
+    x: 900,
+});
+
+gsap.from(".ligneV3", { 
+    duration: 3,
+    opacity: 0,
+    y: -500,
+});
+
+gsap.from(".ligneV4", { 
+    duration: 3,
+    opacity: 0,
+    y: 500,
+});
+
+gsap.from(".ligneD1", { 
+    duration: 3,
+    opacity: 0,
+    x: -900,
+    y: -500,
+});
+
+gsap.from(".ligneD2", { 
+    duration: 3,
+    opacity: 0,
+    x: 900,
+    y: 500,
+});
+
+gsap.from(".ligneD3", { 
+    duration: 3,
+    opacity: 0,
+    y: 500,
+    x: -900,
+});
+
+gsap.from(".ligneD4", { 
+    duration: 3,
+    opacity: 0,
+    y: -500,
+    x: 500,
+});
