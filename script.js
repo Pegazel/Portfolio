@@ -217,7 +217,7 @@ const projects = [
             "Adobe audition",
             "Photoshop",
             "Son",
-            ""
+            "Analyse de visuels"
         ]
     },
     {
@@ -259,7 +259,7 @@ const projects = [
         lien: "refonte.html",
         details: [
             "Figma",
-            "Analyse",
+            "Analyse d'une page web",
             "UX",
             "UI",
             ""
