@@ -1,0 +1,36 @@
+.top {
+    grid-template-columns: 1fr 1fr;
+}
+
+header {
+    height: fit-content;
+}
+
+main{
+    margin-top: 0vh;
+    min-height: 100vh;
+    padding: 5%;
+}
+
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h2{
+    padding-left: 0px;
+    text-align: left;
+    font-size: 2rem;
+}
+
+li{
+    margin-left: 20px;
+}
+
+li a {
+    color: #fff;
+}
+
+ul{
+    margin-top: 20px;
+}

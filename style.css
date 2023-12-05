@@ -38,6 +38,7 @@ header {
 }
 
 .top {
+  position: relative;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
@@ -78,7 +79,6 @@ button.dark-mode-toggle {
     margin-right: 20px;
     margin-top: 20px;
     cursor: pointer;
-    /* width: 20%; */
     opacity: 1;
 }
 
@@ -86,7 +86,6 @@ button.dark-mode-toggle {
 body.dark-mode {
   background-image: url(images/dark-mode1.jpg);
   color: #fff; 
-  /* position: fixed; */
 }
 
 body.dark-mode #cercle {
@@ -98,111 +97,111 @@ body.dark-mode #cercle {
 
 
 .top img{
-    width: 70px;
-    margin-right: 30px;
-    /* position: fixed; */
+  width: 70px;
+  margin-right: 30px;
 }
 
 
 #cercle {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    background-image: radial-gradient(rgba(255, 162, 0, 0.848), rgba(128, 0, 255, 0));
-    border: solid 2px rgb(255, 255, 255);
-    border-radius: 50%;
-    top: 60%; 
-    left: 50.5%; 
-    transform: translate(-50%, -50%);
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-image: radial-gradient(rgba(255, 162, 0, 0.848), rgba(128, 0, 255, 0));
+  border: solid 2px rgb(255, 255, 255);
+  border-radius: 50%;
+  top: 60%; 
+  left: 50.5%; 
+  transform: translate(-50%, -50%);
 }
 
 
 nav>div{
-    border-bottom: 2px solid rgb(255, 255, 255); 
-    position: absolute;
-    transform: translate(-50%, -50%);
+  border-bottom: 2px solid rgb(255, 255, 255); 
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 
 .ligneH1 {
-    width: 15%;
-    top: 60%; 
-    left: 34%; 
+  width: 15%;
+  top: 60%; 
+  left: 34%; 
 }
 
 .ligneH2 {
-    width: 15%;
-    top: 60%; 
-    left: 68%; 
+  width: 15%;
+  top: 60%; 
+  left: 68%; 
 }
 
 .ligneV3 {
-    width: 10%;
-    top: 33%; 
-    left: 45.5%; 
-    transform: rotate(90deg);
+  width: 10%;
+  top: 33%; 
+  left: 45.5%; 
+  transform: rotate(90deg);
 }
 
 .ligneV4 {
-    width: 10%;
-    top: 87%; 
-    left: 45.5%; 
-    transform: rotate(90deg);
+  width: 10%;
+  top: 87%; 
+  left: 45.5%; 
+  transform: rotate(90deg);
 }
 
 .ligneD1 { 
     width: 17%;
-    border-bottom: 2px solid rgb(255, 255, 255,0.2);
-    top: 30%; 
-    left: 31%; 
-    transform: rotate(45deg);
-    text-align: center;
-    
+  border-bottom: 2px solid rgb(255, 255, 255,0.2);
+  top: 30%; 
+  left: 31%; 
+  transform: rotate(45deg);
+  text-align: center;
+  
 }
 
 .ligneD2 {
-    width: 15%;
-    border-bottom: 2px solid rgb(255, 255, 255,0.2);
-    top: 78%; 
-    left: 55%; 
-    transform: rotate(45deg);
-    text-align: center;
+  width: 15%;
+  border-bottom: 2px solid rgb(255, 255, 255,0.2);
+  top: 78%; 
+  left: 55%; 
+  transform: rotate(45deg);
+  text-align: center;
 }
 
 .ligneD3 {
-    width: 15%;
-    border-bottom: 2px solid rgb(255, 255, 255,0.2);
-    top: 78%; 
-    left: 31%; 
-    transform: rotate(-45deg);
-    text-align: center;
+  width: 15%;
+  border-bottom: 2px solid rgb(255, 255, 255,0.2);
+  top: 78%; 
+  left: 31%; 
+  transform: rotate(-45deg);
+  text-align: center;
 }
 
 .ligneD4 {
-    width: 17%;
-    border-bottom: 2px solid rgb(255, 255, 255,0.2);
-    top: 30%; 
-    left: 55%; 
-    transform: rotate(-45deg);
-    text-align: center;
+  width: 17%;
+  border-bottom: 2px solid rgb(255, 255, 255,0.2);
+  top: 30%; 
+  left: 55%; 
+  transform: rotate(-45deg);
+  text-align: center;
 }
 
 nav a{
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 2em;
-    opacity: 1;
-    position: relative;
-    top: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2em;
+  opacity: 1;
+  position: relative;
+  top: 18px;
 }
 
 main{
-    background-image: url(images/glass.png) ;
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
-    background-position: center;
-    max-width: 100%;
-    margin-top: 100vh;
+  background-image: url(images/glass.png) ;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-position: center;
+  max-width: 100%;
+  margin-top: 100vh;
+  /* position: relative; */
 }
 
 .wrapper{
@@ -355,7 +354,6 @@ li:before{
 
 
 .section_propos{
-  height: 90vh;
   text-align: center;
   margin-top: 20px;
 }
@@ -363,7 +361,7 @@ li:before{
 .container {
   position: relative;
   width: fit-content;
-  top: 40%;
+  margin-top: 200px;
   left: 50%;
   transform: translate(-50%, -50%);  
 }
@@ -375,11 +373,11 @@ li:before{
 }
 
 .moi:hover {
-  transform: rotate(360deg);
+  transform: scale(1.1);
 }
 
 .section_propos>p{
-  margin-top: 10%;
+  margin-bottom: 10px;
   padding-right: 10px;
   width: 40%;
   font-family: 'Jost', 'Courier New', Courier, monospace;
@@ -389,15 +387,15 @@ li:before{
 
 .text {
   font-size: 2rem;
-  /* position: absolute; */
-  /* transform: translate(-50%, -50%); */
   display: none;
-  
+  transition: opacity 0.3s ease;
 }
 
 .word {
   display: inline-block;
-  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .un{
@@ -409,7 +407,7 @@ li:before{
 .deux{
   position: absolute;
   top: 55%;
-  right: 150%;
+  right: 140%;
 }
 
 .trois{
@@ -420,8 +418,8 @@ li:before{
 
 .quatre{
   position: absolute;
-  top: -50%;
-  right: -10%;
+  top: -45%;
+  left: -20%;
 }
 
 .cinq{
@@ -482,6 +480,21 @@ body.dark-mode .btn4{
 
 body.dark-mode .btn4:hover{
   box-shadow: 0 0 0 2px white, 0 0 0 3px #424242, 0 0 0 2px white inset, 0 0 0 5px #424242, 7.5px 7.5px 0 2.5px white, 10px 10px 0 5px #424242;
+}
+
+footer{
+  position: relative;
+  background-color: #141414;
+  box-shadow: 0px -5px 5px #141414;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer a{
+  color: #FFF;
+  cursor: pointer;
 }
 
 
@@ -564,7 +577,21 @@ body.dark-mode .btn4:hover{
   }
 
 }
-
+@media (max-width: 830px) { 
+  .text {
+    font-size: 1.5rem;
+  }
+  .quatre {
+    right: -20%;
+  }
+  .moi{
+    width: 150px;
+    margin: 3vw;
+  }
+  .section_propos>p{
+    width: 60%;
+  }
+}
 @media (max-width: 800px) { 
 
   .ligneD2 { 
@@ -584,7 +611,47 @@ body.dark-mode .btn4:hover{
   }
 
 }
-
+@media (max-width: 700px) { 
+  .text {
+    font-size: 1.5rem;
+  }
+  .quatre {
+    right: -20%;
+  }
+  .moi{
+    margin: 20px 0 0 0 ;
+  }
+  .section_propos>p{
+    width: 100%;
+    padding-left: 20px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 615px) { 
+  .text {
+    font-size: 1rem;
+  }
+  .moi{
+    margin: 0px;
+  }
+  .un{
+    top: 90%;
+  }
+  .deux{
+    top: 40%;
+    right: 120%;
+  }
+  .trois{
+    right: 110%;
+  }  
+  .cinq{
+    left: 110%;
+  }
+  .six{
+    top: 30%;
+    left: 120%;
+  }
+}
 @media (max-width: 650px) { 
 
 .ligneH1 {
@@ -638,7 +705,6 @@ nav a{
 }
 
 }
-
 @media (max-width: 570px) { 
 
 .name { 
@@ -669,70 +735,68 @@ button.dark-mode-toggle {
   width: 100px; 
 }
 }
-
 @media (max-width: 466px) { 
-
 #cercle, body.dark-mode #cercle{
   width: 100px;
   height: 100px;
 }
-
-/* body.dark-mode #cercle {
-  width: 125px;
-  height: 125px;
-} */
-
 .ligneH1 { 
   left: 20%;
   width: 25%;
 }
-
 .ligneH2 {
     left: 81%;
     width: 25%;
 }
-
 .ligneV3 {
     width: 25%;
     left: 39%; 
 }
-
 .ligneV4 {
     width: 25%;
     left: 39%; 
 }
-
 .ligneD1 {
     top: 35%; 
     left: 10%; 
     width: 30%;
 }
-
 .ligneD2 {
     top: 77%; 
     left: 65%; 
     width: 30%;
 }
-
 .ligneD3 {
     top: 77%; 
     left: 10%; 
     width: 30%;
 }
-
 .ligneD4 {
     top: 35%; 
     left: 65%;
     width: 30%; 
 }
+.deux{
+  top: 90%;
+  right: 80%;
 }
-
+.un{
+  top: 50%;
+  right: 120%;
+}
+.six{
+  top: 55%;
+  left: 105%;
+}
+}
 @media (max-width: 400px) { 
 .ligneD2 { 
   width: 35%;
 }
+.text{
+  display: block;
 }
-
+}
 @media (max-width: 320px) { 
 
 #cercle{
