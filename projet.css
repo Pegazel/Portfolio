@@ -17,8 +17,6 @@ main{
     min-height: 100vh;
 }
 
-
-
 .image_descri {
     margin-top: 3vh;
     padding: 0px 20px 0px 20px;
@@ -60,8 +58,8 @@ figure{
 .hover figure img:not(.big-img):not(:hover) {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
 }
 
 .hover figure img.big-img {

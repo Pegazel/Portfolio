@@ -1,21 +1,32 @@
 document.addEventListener("DOMContentLoaded", function() {
     const darkModeToggle = document.querySelector(".dark-mode-toggle");
-
     const body = document.body;
-
+    
+    // Vérifie s'il y a un mode stocké localement
+    const isDarkMode = localStorage.getItem("darkMode") === "true";
+    
+    // Si le mode sombre était sélectionné, applique la classe correspondante
+    if (isDarkMode) {
+        body.classList.add("dark-mode");
+        darkModeToggle.querySelector("img").src = "images/soleil.png";
+    }
+    
     darkModeToggle.addEventListener("click", () => {
         body.classList.toggle("dark-mode");
-
+        const isDarkModeEnabled = body.classList.contains("dark-mode");
+        
+        // Stocke l'état du mode dans le stockage local
+        localStorage.setItem("darkMode", isDarkModeEnabled);
+        
         const img = darkModeToggle.querySelector("img");
-
-    
-        if (body.classList.contains("dark-mode")) {
-            img.src = "images/soleil.png"; 
+        if (isDarkModeEnabled) {
+            img.src = "images/soleil.png";
         } else {
-            img.src = "images/soleil-dark.png"; 
+            img.src = "images/soleil-dark.png";
         }
     });
 });
+
 
 
 
@@ -33,16 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
             // Calculez l'opacité en fonction de la position de défilement
             const opacity = 1 - (scrollPosition - maxScroll) / maxScroll;
 
-            h1.style.opacity = opacity; // Réduisez l'opacité du h1
-            nav.style.opacity = opacity; // Réduisez l'opacité de la nav
-            darkMode.style.opacity = 1; // Maintenez l'opacité du bouton de mode sombre à 1
-            menu.style.opacity = 1; // Maintenez l'opacité du menu à 1
+            h1.style.opacity = opacity; // L'opacité du h1 baisse
+            nav.style.opacity = opacity; // L'opacité de la nav baisse
+            darkMode.style.opacity = 1; // L'opacité du bouton de mode sombre à 1
+            menu.style.opacity = 1; // L'opacité du menu à 1
 
             if (opacity < 0) {
-                nav.style.display = 'none'; // Cachez la nav
+                nav.style.display = 'none'; 
             } else {
-                h1.style.display = 'block'; // Affichez le h1
-                nav.style.display = 'block'; // Affichez la nav
+                h1.style.display = 'block'; 
+                nav.style.display = 'block'; 
             }
         } else {
             h1.style.opacity = 1; 
@@ -124,23 +135,14 @@ document.addEventListener('DOMContentLoaded', function () {
         intervalId = setInterval(showNextSlide, 2000);
     });
 });
-
-
-
-
 //Fin slider
-
-
-
-
-
 
 
 // Données des projets 
 const projects = [
     {
         title: "Resaweb",
-        frontImage: "images/fast&serious.png",
+        frontImage: "images/fast&serious.jpg",
         rightImage: "images/fast&serious2.jpg",
         year: "Mai 2023",
         price: "Dev",
@@ -155,8 +157,8 @@ const projects = [
     },
     {
         title: "Podcast",
-        frontImage: "images/zombie.png",
-        rightImage: "images/zombie2.png",
+        frontImage: "images/zombie.jpg",
+        rightImage: "images/zombie2.jpg",
         year: "Nov 2023",
         price: "Crea",
         lien: "podcast.html",
@@ -178,8 +180,7 @@ const projects = [
             "Indesign",
             "Photoshop",
             "Mise en page",
-            "Poids des images",
-            ""
+            "Poids des images"
         ]
     },
     {
@@ -199,8 +200,8 @@ const projects = [
     },
     {
         title: "Refonte UX/UI",
-        frontImage: "images/parcasterix.png",
-        rightImage: "images/parcasterix2.png",
+        frontImage: "images/parcasterix.jpg",
+        rightImage: "images/parcasterix2.jpg",
         year: "Avril 2023",
         price: "UX/UI",
         lien: "refonte.html",
@@ -208,8 +209,7 @@ const projects = [
             "Figma",
             "Analyse d'une page web",
             "UX",
-            "UI",
-            ""
+            "UI"
         ]
     },
     {
@@ -227,7 +227,6 @@ const projects = [
             "Wordpress"
         ]
     }
-    
 ];
 
 const projectWrapper = document.getElementById("projectWrapper");
@@ -281,73 +280,21 @@ projects.forEach((project) => {
 });
 
 
-
 // A PROPOS
-// const container = document.querySelector('.container');
-// const text = document.querySelector('.text');
-
-// container.addEventListener('mouseover', () => {
-//     text.style.display = 'block';
-// });
-
-// container.addEventListener('mouseleave', () => {
-//     text.style.display = 'none';
-// });
-
-
-
-// gsap.set(".word", { opacity: 0, x: 20 });
-
-// const image = document.querySelector(".moi");
-// const words = document.querySelectorAll(".word");
-
-// image.addEventListener("mouseover", () => {
-//   words.forEach((word, index) => {
-//     gsap.to(word, {
-//       opacity: 1,
-//       x: 0,
-//       duration: 0.5 * (index + 1), // Durée progressive pour chaque mot
-//       ease: "power4.out", // Vous pouvez ajuster l'effet d'animation ici
-//       delay: 0.1 * index, // Délai entre chaque mot
-//     });
-//   });
-// });
-
-// image.addEventListener("mouseleave", () => {
-//   words.forEach((word, index) => {
-//     gsap.to(word, {
-//       opacity: 0,
-//       x: 20,
-//       duration: 0.6,
-//       ease: "power2.out",
-//       delay: 0.05 * (words.length - index), // Rétractation progressive des mots
-//     });
-//   });
-// });
-
-
-
-
-
-const container = document.querySelector('.container');
 const text = document.querySelector('.text');
 const image = document.querySelector(".moi");
 const words = document.querySelectorAll(".word");
-
-// Vérification si l'utilisateur est sur mobile
 const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
 
 if (isMobile) {
-  text.style.display = 'block'; // Afficher le texte directement sur mobile
+  // Écran plus petit que 768px : afficher les mots directement sans animation
+  text.style.display = 'block';
+  words.forEach((word) => {
+    word.style.opacity = 1;
+    word.style.transform = 'translateX(0)';
+  });
 } else {
-  container.addEventListener('mouseover', () => {
-    text.style.display = 'block';
-  });
-
-  container.addEventListener('mouseleave', () => {
-    text.style.display = 'none';
-  });
-
+  // Écran plus grand que 768px : ajouter l'animation au survol de l'image
   image.addEventListener("mouseover", () => {
     words.forEach((word, index) => {
       gsap.to(word, {
@@ -358,6 +305,7 @@ if (isMobile) {
         delay: 0.1 * index,
       });
     });
+    text.style.display = 'block';
   });
 
   image.addEventListener("mouseleave", () => {
@@ -370,6 +318,7 @@ if (isMobile) {
         delay: 0.05 * (words.length - index),
       });
     });
+    text.style.display = 'none';
   });
 }
 

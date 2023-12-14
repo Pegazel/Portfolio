@@ -272,7 +272,7 @@ main{
 }
 
 /* Pour une carte par ligne à partir d'une certaine largeur */
-@media (max-width: 768px) {
+@media (max-width: 550px) {
   .wrapper {
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
   }
@@ -280,15 +280,12 @@ main{
 
 h2{
   font-size: 2.5rem;
-  /* position: absolute; */
-  /* z-index: 1; */
   text-align: center;
   padding: 2%;
 }
 
 .price{
   float: right;
-  /* margin-top: -10%; */
   font-size: 2rem;
   border: 2px rgb(255, 255, 255) solid;
   width: fit-content;
@@ -307,7 +304,6 @@ p{
   font-weight: 300;
 }
 
-
 ul{
   margin-left: 21px;
   padding: 0;
@@ -324,7 +320,7 @@ li:before{
   content: 'x';
   position: absolute;
   left: -20px;
-  opacity: .55;
+  opacity: 0.55;
 }
 
 .slider {
@@ -338,21 +334,21 @@ li:before{
 }
 
 .logo-container {
-  display: flex; /* Utilisez un conteneur flex pour les logos */
-  transition: transform 0.5s ease; /* Ajout de l'effet de transition */
+  display: flex; 
+  transition: transform 0.5s ease; 
 }
 
 .logo {
-  flex: 0 0 auto; /* Les logos ne doivent pas redimensionner */
+  flex: 0 0 auto;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   width: 100px; 
-  height: 80px; /* Ajustez selon vos préférences */
+  height: 80px; 
 }
 
 
-
+/* Section à propos */
 .section_propos{
   text-align: center;
   margin-top: 20px;
@@ -436,9 +432,6 @@ li:before{
 
 
 /* PAGE CONTACT */
-
-
-/* Button Group */
 .button-group {
   position: relative;
   display: flex;
@@ -448,10 +441,6 @@ li:before{
   padding: 5rem 0 10rem 0;
 }
 
-/* .button-group div {
-  margin: 5rem 0 10rem 0;
-} */
-
 .button-group a {
   padding: 10px 30px;
   margin: 1em;
@@ -460,8 +449,8 @@ li:before{
   transition: 0.5s ease-in-out;
 }
 
-/* Button Styling */
 .btn4 {
+  border: white 4px solid;
   background-color: #FF8360;
   color: #FFF;
   font-size: 20px;
@@ -469,6 +458,7 @@ li:before{
 }
 
 .btn4:hover {
+  /* border: none; */
   padding: 1em 1.5em;
   letter-spacing: 2.5px;
   box-shadow: 0 0 0 2px white, 0 0 0 3px #FF8360, 0 0 0 2px white inset, 0 0 0 5px #FF8360, 7.5px 7.5px 0 2.5px white, 10px 10px 0 5px #FF8360;
@@ -485,7 +475,7 @@ body.dark-mode .btn4:hover{
 footer{
   position: relative;
   background-color: #141414;
-  box-shadow: 0px -5px 5px #141414;
+  box-shadow: 0px -3px 15px #141414;
   height: 8vh;
   display: flex;
   align-items: center;
@@ -494,30 +484,23 @@ footer{
 
 footer a{
   color: #FFF;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
-
-
 
 
 /* Barre de défilement verticale */
 ::-webkit-scrollbar {
-    width: 10px;
-    
+  width: 10px;
 }
-
 ::-webkit-scrollbar-thumb {
-    background-color: #f1f1f1; /* Couleur du bouton de défilement */
-    border-radius: 6px; /* Coins arrondis du bouton de défilement */
-    
+  background-color: #f1f1f1;
+  border-radius: 6px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #818181; /* Couleur au survol du bouton de défilement */
+  background-color: #818181;
 }
-
 ::-webkit-scrollbar-track {
-        background-color: #2f2f2f;
+  background-color: #2f2f2f;
 }
 
 
