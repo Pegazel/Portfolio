@@ -66,78 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-// SLIDER SUTOUT PAS TOUCHER!!!!    IL MARCHEEEEE
-
-document.addEventListener('DOMContentLoaded', function () {
-    var sliderContainer = document.querySelector('.slider');
-    var logoContainer = document.querySelector('.logo-container');
-    var imageNames = ['Photoshop.png', 'css.png', 'html.png', 'Figma.svg', 'Lightroom.png', 'indesign.png', 'notion.png', 'libreoffice.png', 'WordPress.png', 'Premiere_Pro.png', 'vscode.png', 'PowerPoint.png', 'PHP.png', 'Excel.png', 'js.png', 'Illustrator.png', 'Audition.png', 'After_Effects.png'];
-    var logoCount = imageNames.length;
-    var cloneCount = 3; // Nombre de clones à afficher (réglable selon la taille souhaitée du défilement)
-    var mobileLogoWidth = 100; // Largeur pour les écrans mobiles
-    var logoWidth = 200; // Largeur pour les ordinateurs
-    var logoMargin = 40; // Marge entre les logos
-
-    function createLogo(imageName) {
-        const logo = document.createElement('div');
-        logo.classList.add('logo');
-        logo.style.backgroundImage = `url('images/logo/${imageName}')`;
-        logo.style.width = logoWidth + 'px';
-        logo.style.marginRight = logoMargin + 'px'; // Espacement entre les logos
-        logoContainer.appendChild(logo);
-    }
-
-    function updateLogoWidth() {
-        var screenWidth = window.innerWidth || document.documentElement.clientWidth;
-        logoContainer.innerHTML = ''; // Effacer les logos actuels
-
-        logoWidth = screenWidth < 769 ? mobileLogoWidth : 200; // Ajuster la largeur du logo en fonction de l'écran
-
-        for (let i = 0; i < cloneCount * logoCount; i++) {
-            createLogo(imageNames[i % logoCount]); // Utilisation de l'opérateur modulo pour obtenir les index des logos à afficher
-        }
-
-        logoContainer.style.width = (logoWidth + logoMargin) * logoCount * cloneCount + 'px'; // Ajustement de la largeur du conteneur en fonction du nombre de logos
-    }
-
-    updateLogoWidth(); // Appel initial de la fonction
-    window.addEventListener('resize', updateLogoWidth); // Gestion du redimensionnement de la fenêtre
-
-    var currentIndex = 0;
-
-    function showNextSlide() {
-        currentIndex++;
-        const newPosition = -currentIndex * (logoWidth + logoMargin) + 'px'; // Inclure la marge dans le calcul
-        logoContainer.style.transition = 'transform 0.5s ease'; // Ajout d'une transition
-    
-        if (currentIndex >= logoCount) {
-            setTimeout(function () {
-                currentIndex = 0;
-                logoContainer.style.transition = 'none';
-                logoContainer.style.transform = 'translateX(' + (-(currentIndex * (logoWidth + logoMargin))) + 'px)'; // Réinitialisation à la position initiale
-                void logoContainer.offsetWidth;
-                logoContainer.style.transition = 'transform 0.5s ease';
-            }, 500); // Retard pour donner l'illusion d'une transition en douceur
-        }
-    
-        logoContainer.style.transform = 'translateX(' + newPosition + ')';
-    }
-    
-
-    setInterval(showNextSlide, 2000); // Défilement automatique
-
-    sliderContainer.addEventListener('mouseenter', function () {
-        clearInterval(intervalId);
-    });
-
-    sliderContainer.addEventListener('mouseleave', function () {
-        intervalId = setInterval(showNextSlide, 2000);
-    });
-});
-//Fin slider
-
-
 // Données des projets 
 const projects = [
     {
@@ -280,6 +208,71 @@ projects.forEach((project) => {
 });
 
 
+
+
+// SLIDER SUTOUT PAS TOUCHER!!!!    IL MARCHEEEEE
+
+document.addEventListener('DOMContentLoaded', function () {
+    var sliderContainer = document.querySelector('.slider');
+    var logoContainer = document.querySelector('.logo-container');
+    var imageNames = ['Photoshop.png', 'css.png', 'html.png', 'Figma.svg', 'Lightroom.png', 'indesign.png', 'notion.png', 'libreoffice.png', 'WordPress.png', 'Premiere_Pro.png', 'vscode.png', 'PowerPoint.png', 'PHP.png', 'Excel.png', 'js.png', 'Illustrator.png', 'Audition.png', 'After_Effects.png'];
+    var logoCount = imageNames.length;
+    var cloneCount = 3; // Nombre de clones à afficher (réglable selon la taille souhaitée du défilement)
+    var mobileLogoWidth = 100; // Largeur pour les écrans mobiles
+    var logoWidth = 200; // Largeur pour les ordinateurs
+    var logoMargin = 40; // Marge entre les logos
+
+    function createLogo(imageName) {
+        const logo = document.createElement('div');
+        logo.classList.add('logo');
+        logo.style.backgroundImage = `url('images/logo/${imageName}')`;
+        logo.style.width = logoWidth + 'px';
+        logo.style.marginRight = logoMargin + 'px'; // Espacement entre les logos
+        logoContainer.appendChild(logo);
+    }
+
+    function updateLogoWidth() {
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth;
+        logoContainer.innerHTML = ''; // Effacer les logos actuels
+
+        logoWidth = screenWidth < 769 ? mobileLogoWidth : 200; // Ajuster la largeur du logo en fonction de l'écran
+
+        for (let i = 0; i < cloneCount * logoCount; i++) {
+            createLogo(imageNames[i % logoCount]); // Utilisation de l'opérateur modulo pour obtenir les index des logos à afficher
+        }
+
+        logoContainer.style.width = (logoWidth + logoMargin) * logoCount * cloneCount + 'px'; // Ajustement de la largeur du conteneur en fonction du nombre de logos
+    }
+
+    updateLogoWidth(); // Appel initial de la fonction
+    window.addEventListener('resize', updateLogoWidth); // Gestion du redimensionnement de la fenêtre
+
+    var currentIndex = 0;
+
+    function showNextSlide() {
+        currentIndex++;
+        const newPosition = -currentIndex * (logoWidth + logoMargin) + 'px'; // Inclure la marge dans le calcul
+        logoContainer.style.transition = 'transform 0.5s ease'; // Ajout d'une transition
+    
+        if (currentIndex >= logoCount) {
+            setTimeout(function () {
+                currentIndex = 0;
+                logoContainer.style.transition = 'none';
+                logoContainer.style.transform = 'translateX(' + (-(currentIndex * (logoWidth + logoMargin))) + 'px)'; // Réinitialisation à la position initiale
+                void logoContainer.offsetWidth;
+                logoContainer.style.transition = 'transform 0.5s ease';
+            }, 500); // Retard pour donner l'illusion d'une transition en douceur
+        }
+    
+        logoContainer.style.transform = 'translateX(' + newPosition + ')';
+    }
+
+    setInterval(showNextSlide, 2000); // Défilement automatique
+});
+//Fin slider
+
+
+
 // A PROPOS
 const text = document.querySelector('.text');
 const image = document.querySelector(".moi");
@@ -313,7 +306,7 @@ if (isMobile) {
       gsap.to(word, {
         opacity: 0,
         x: 20,
-        duration: 0.6,
+        duration: 0.1,
         ease: "power2.out",
         delay: 0.05 * (words.length - index),
       });
