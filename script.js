@@ -69,6 +69,20 @@ document.addEventListener('DOMContentLoaded', () => {
 // Données des projets 
 const projects = [
     {
+        title: "CV Vidéo",
+        frontImage: "images/cvvideo.png",
+        rightImage: "images/cvvideo2.png",
+        year: "Jan 2024",
+        price: "Video",
+        lien: "cvvideo.html",
+        details: [
+            "Adobe Audition",
+            "Premiere Pro",
+            "After Effects",
+            "Montage",
+            "Tournage"
+        ]
+    },{
         title: "Resaweb",
         frontImage: "images/fast&serious.jpg",
         rightImage: "images/fast&serious2.jpg",
