@@ -9,7 +9,7 @@
 }
 
 html {    
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     -ms-scroll-snap-type: y mandatory;
         scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
@@ -201,13 +201,11 @@ main{
   background-position: center;
   max-width: 100%;
   margin-top: 100vh;
-  /* position: relative; */
 }
 
 .wrapper{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-  /* perspective: 800px; */
   color: #fcfcfc;
   animation: fadeIn .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1;
 }
@@ -435,41 +433,18 @@ li:before{
 .button-group {
   position: relative;
   display: flex;
-  gap: 6%;
   justify-content: center;
   text-align: center;
   padding: 5rem 0 10rem 0;
 }
 
-.button-group a {
-  padding: 10px 30px;
-  margin: 1em;
-  border-radius: 5px;
-  text-decoration: none;
+.button-group img{
+  width: 20%;
+}
+
+.button-group img:hover{
+  width: 30%;
   transition: 0.5s ease-in-out;
-}
-
-.btn4 {
-  border: white 4px solid;
-  background-color: #FF8360;
-  color: #FFF;
-  font-size: 20px;
-
-}
-
-.btn4:hover {
-  /* border: none; */
-  padding: 1em 1.5em;
-  letter-spacing: 2.5px;
-  box-shadow: 0 0 0 2px white, 0 0 0 3px #FF8360, 0 0 0 2px white inset, 0 0 0 5px #FF8360, 7.5px 7.5px 0 2.5px white, 10px 10px 0 5px #FF8360;
-}
-
-body.dark-mode .btn4{
-  background-color: #424242;
-}
-
-body.dark-mode .btn4:hover{
-  box-shadow: 0 0 0 2px white, 0 0 0 3px #424242, 0 0 0 2px white inset, 0 0 0 5px #424242, 7.5px 7.5px 0 2.5px white, 10px 10px 0 5px #424242;
 }
 
 footer{
@@ -484,9 +459,12 @@ footer{
 
 footer a{
   color: #FFF;
-  /* cursor: pointer; */
 }
 
+p a {
+  color: #FFF;
+  text-decoration: underline;
+}
 
 /* Barre de défilement verticale */
 ::-webkit-scrollbar {

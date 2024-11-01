@@ -69,6 +69,21 @@ document.addEventListener('DOMContentLoaded', () => {
 // Données des projets 
 const projects = [
     {
+        title: "Art&Misia",
+        frontImage: "images/artemisia.png",
+        rightImage: "images/artemisia2.png",
+        year: "Mars 2024",
+        price: "Crea",
+        lien: "artemisia.html",
+        details: [
+            "Indesign",
+            "Photoshop",
+            "Figma",
+            "Instagram",
+            "Facebook",
+            "Tiktok"
+        ]
+    },{
         title: "CV Vidéo",
         frontImage: "images/cvvideo.png",
         rightImage: "images/cvvideo2.png",
@@ -109,20 +124,6 @@ const projects = [
             "Photoshop",
             "Son",
             "Analyse de visuels"
-        ]
-    },
-    {
-        title: "Journal de quartier",
-        frontImage: "images/jq.png",
-        rightImage: "images/jq2.png",
-        year: "Nov 2022",
-        price: "Crea",
-        lien: "journal.html",
-        details: [
-            "Indesign",
-            "Photoshop",
-            "Mise en page",
-            "Poids des images"
         ]
     },
     {
@@ -167,6 +168,20 @@ const projects = [
             "Charte graphique",
             "Charte éditoriale",
             "Wordpress"
+        ]
+    },
+    {
+        title: "Journal de quartier",
+        frontImage: "images/jq.png",
+        rightImage: "images/jq2.png",
+        year: "Nov 2022",
+        price: "Crea",
+        lien: "journal.html",
+        details: [
+            "Indesign",
+            "Photoshop",
+            "Mise en page",
+            "Poids des images"
         ]
     }
 ];
