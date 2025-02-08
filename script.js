@@ -69,6 +69,21 @@ document.addEventListener('DOMContentLoaded', () => {
 // Données des projets 
 const projects = [
     {
+        title: "EON",
+        frontImage: "images/eon.jpg",
+        rightImage: "images/eon2.png",
+        year: "Janvier 2025",
+        price: "Crea",
+        lien: "eon.html",
+        details: [
+            "Direction artistique",
+            "Photoshop",
+            "Figma",
+            "Instagram",
+            "Blender",
+            "Premiere Pro"
+        ]
+    },{
         title: "Art&Misia",
         frontImage: "images/artemisia.png",
         rightImage: "images/artemisia2.png",
